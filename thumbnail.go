@@ -32,7 +32,7 @@ func loadImageFromBuffer(reader io.Reader) (img image.Image, format string, err 
 	img, format, err = image.Decode(reader)
 	if err != nil {
 		log.Printf("Error while decoding file : %s", err)
-		return nil, "", err
+		return nil, format, err
 	}
 	return
 }
